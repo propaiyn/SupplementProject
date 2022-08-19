@@ -1,15 +1,13 @@
 package com.qa.SupplementProject.Supplement;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v2.1/supplement")
+@RequestMapping("api/v3/supplement")
 public class SupplementController {
 
     private final SupplementService supplementService;
@@ -22,5 +20,10 @@ public class SupplementController {
     @GetMapping
     public List<Supplement> getAllSupplements() {
         return supplementService.getAllSupplements();
+    }
+
+    @PostMapping
+    public void addNewSupplement(@RequestBody Supplement supplement) {
+        supplementService.addNewSupplement(supplement);
     }
 }
