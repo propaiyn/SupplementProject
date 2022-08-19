@@ -30,6 +30,7 @@ public class Supplement {
     private LocalDate entryDate;
     @NotNull
     private String name;
+    //Implement regex no letters
     private Long pubChemID;
     private String suppDescription;
     @NotNull
