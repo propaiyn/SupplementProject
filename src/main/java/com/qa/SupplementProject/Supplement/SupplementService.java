@@ -19,6 +19,7 @@ public class SupplementService {
     public List<Supplement> getAllSupplements() {
         return supplementRepository.findAll();
     }
+
     public void addNewSupplement(Supplement supplement) {
 
         Optional<Supplement> suppNameOptional = supplementRepository
@@ -29,10 +30,31 @@ public class SupplementService {
         }
 
         Optional<Supplement> suppPCIDOptional = supplementRepository
-                .findBypubChemID(supplement.getPubChemID());
+                .findByPubChemID(supplement.getPubChemID());
         if (suppPCIDOptional.isPresent()) {
             throw new IllegalStateException(
                     "Supplement with Pubchem ID " + supplement.getPubChemID() + " already exists in the database");
         }
+        supplementRepository.save(supplement);
+    }
+
+    public void deleteSuppByID(Long supplementID) {
+        boolean idExists = supplementRepository.existsById(supplementID);
+
+        if(!idExists) {
+            throw new IllegalStateException("Supplement with ID: " + supplementID + " does not exist in the database");
+        } else if(idExists) {
+            supplementRepository.deleteById(supplementID);
+        }
+    }
+
+    public void deleteSuppByName(String supplementName){
+        boolean nameExists = supplementRepository.existsByName(supplementName);
+
+        if(!nameExists) {
+            throw new IllegalStateException("Supplement with name: " + supplementName + " does not exist in the database");
+        } else {
+            supplementRepository.deleteByName(supplementName);
+            System.out.println("Supplement with name " + supplementName + " was successfully deleted");}
     }
 }
