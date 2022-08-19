@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v2/supplement")
+@RequestMapping("api/v2.1/supplement")
 public class SupplementController {
 
     private final SupplementService supplementService;
