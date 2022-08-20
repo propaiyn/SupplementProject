@@ -13,56 +13,50 @@ public class SupplementConfig {
     @Bean
     CommandLineRunner commandLineRunner(SupplementRepository repository) { //Bean creation, Repository injection + access
         return args -> {
-            Supplement vD = new Supplement(1l,
-                    LocalDate.now(),
+            Supplement vD = new Supplement(
                     "Vitamin D",// to delete with spaces, path variable will look like: Vitamin%20D
+                   "Cholecalciferol is a steroid hormone",
                     5280795L,
-                    "Cholecalciferol is a steroid hormone",
                     0.1,
                     0.2);
 
-            Supplement vC = new Supplement(2l,
-                    LocalDate.now(),
+            Supplement vC = new Supplement(
                     "Vitamin C",
-                    54670067L,
-                    "Ascorbic Acid is a natural water-soluble vitamin (Vitamin C).",
+                    "Ascorbic Acid is a natural water-soluble vitamin (Vitamin C)."
+                    ,54670067L,
                     40.0,
                     60.0);
 
-            Supplement vE = new Supplement(3l,
-                    LocalDate.now(),
+            Supplement vE = new Supplement(
                     "Vitamin E",// to delete with spaces, path variable will look like: Vitamin%20D
+                    "Alpha-Tocopherol is the orally bioavailable alpha form" +
+                    "of the naturally-occurring fat-soluble vitamin E," +
+                    " with potent antioxidant and cytoprotective activities.",
                     14985L,
-                    "CAlpha-Tocopherol is the orally bioavailable alpha form" +
-                            "of the naturally-occurring fat-soluble vitamin E," +
-                            " with potent antioxidant and cytoprotective activities.",
                     3.0,
                     4.0);
 
-            Supplement iron= new Supplement(4l,
-                    LocalDate.now(),
+            Supplement iron= new Supplement(
                     "Iron",
-                    23925L,
                     "Iron is an essential heavy metal that is included in many over-the-counter" +
-                            "multivitamin and mineral supplements and is used therapeutically in higher doses to treat" +
-                            " or prevent iron deficiency anemia.",
+                    "multivitamin and mineral supplements and is used therapeutically in higher doses to treat" +
+                    " or prevent iron deficiency anemia.",
+                    23925L,
                     8.0,
                     15.0);
 
-            Supplement vK = new Supplement(5l,
-                    LocalDate.now(),
+            Supplement vK = new Supplement(
                     "Vitamin K",
-                    5280483L,
                     "A lipid cofactor that is required for normal blood clotting.",
+                    5280483L,
                     0.040,
                     0.1);
 
-            Supplement calcium = new Supplement(1l,
-                    LocalDate.now(),
+            Supplement calcium = new Supplement(
                     "Calcium",
-                    5460341L,
                     "Calcium plays a vital role in the anatomy, physiology and" +
-                            " biochemistry of organisms and of the cell, particularly in signal transduction pathways.",
+                    " biochemistry of organisms and of the cell, particularly in signal transduction pathways.",
+                    5460341L,
                     700.0,
                     1000.0);
 

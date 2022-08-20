@@ -6,7 +6,6 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @ToString
@@ -26,16 +25,36 @@ public class Supplement {
             generator = "supplement_sequence" // Sequence that we just created
     )
     private Long id;
+
     @NotNull
-    private LocalDate entryDate;
-    @NotNull
+    private LocalDate entryDate = LocalDate.now();
+
+    @Column
     private String name;
+
     //Implement regex no letters
-    private Long pubChemID;
-    private String suppDescription;
-    @NotNull
+    @Column
+    private Long pubChemId;
+
+    private String description;
+
+    @Column(name = "supplement_lower_boundary_dose_in_mg")
     private Double lowerBoundaryDoseMG;
-    @NotNull
+
+    @Column(name = "supplement_upper_boundary_dose_in_mg")
     private Double upperBoundaryDoseMG;
 
+    public Supplement(
+                      String name,
+                      String description,
+                      Long pubChemId,
+                      Double lowerBoundaryDoseMG,
+                      Double upperBoundaryDoseMG
+    ) {
+        this.name = name;
+        this.description = description;
+        this.pubChemId = pubChemId;
+        this.lowerBoundaryDoseMG = lowerBoundaryDoseMG;
+        this.upperBoundaryDoseMG = upperBoundaryDoseMG;
+    }
 }
