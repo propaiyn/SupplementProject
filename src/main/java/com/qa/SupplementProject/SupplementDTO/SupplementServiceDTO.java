@@ -1,7 +1,12 @@
-package com.qa.SupplementProject.Supplement;
+package com.qa.SupplementProject.SupplementDTO;
 
-import com.qa.SupplementProject.Exception.AlreadyExistsException;
+import com.qa.SupplementProject.Exception.NameExistsException;
+import com.qa.SupplementProject.Exception.PubChemIdExistsException;
 import com.qa.SupplementProject.Exception.SupplementNotFoundException;
+import com.qa.SupplementProject.Supplement.Supplement;
+import com.qa.SupplementProject.Supplement.SupplementRepository;
+import lombok.AllArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,13 +14,20 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class SupplementService {
-
-    private final SupplementRepository supplementRepository;
+@AllArgsConstructor
+public class SupplementServiceDTO {
 
     @Autowired
-    public SupplementService(SupplementRepository supplementRepository) {
-        this.supplementRepository = supplementRepository;
+    private SupplementRepository supplementRepository;
+    private ModelMapper mapper;
+
+    private Supplement mapToDTO(Supplement supplement) {
+        Supplement dto = new Supplement();
+        dto.setName(supplement.getName());
+        dto.setPubChemId(supplement.getPubChemId());
+        dto.setLowerBoundaryDoseMG(supplement.getLowerBoundaryDoseMG());
+        dto.setUpperBoundaryDoseMG(supplement.getUpperBoundaryDoseMG());
+        return dto;
     }
 
     public Supplement getSupplementById(Long supplementId) {
@@ -43,7 +55,9 @@ public class SupplementService {
     } // Retrieves all supplements in the database
 
 
-    public void addNewSupplement(Supplement supplement) {
+    public Supplement addNewSupplement(Supplement supplement) {
+
+        Supplement saved = this.supplementRepository.save(supplement);
 
         Optional<Supplement> suppNameOptional = supplementRepository
                 .findByName(supplement.getName());
@@ -52,20 +66,25 @@ public class SupplementService {
                 .findByPubChemId(supplement.getPubChemId());
 
         if (suppNameOptional.isPresent()) {
-            throw new AlreadyExistsException(
+            throw new NameExistsException(
                     "Supplement " + supplement.getName() + " already exists in the database");
         } else if(suppNameOptional.isPresent()){
             throw new IllegalStateException(
                     "Please provide the name of your supplement");
         } else if (suppPCIDOptional.isPresent()) {
-            throw new AlreadyExistsException(
-                    "Supplement with Pubchem ID " + supplement.getPubChemId() + " already exists in the database");
+            throw new PubChemIdExistsException(
+                    "Supplement with PubChem ID " + supplement.getPubChemId() + " already exists in the database");
         }else if(suppPCIDOptional.isPresent()){
             throw new IllegalStateException(
                     "Please provide the PubChemID of your supplement");
         }
-        supplementRepository.save(supplement);
+        return this.mapToDTO(saved);
     }
+
+//    public Supplement addSupplement(Supplement supplement){
+//        Supplement saved = this.supplementRepository.save(supplement);
+//        return this.mapToDTO(saved);
+//    }
 
     public void deleteSuppByID(Long supplementId) {
         boolean idExists = supplementRepository.existsById(supplementId);
@@ -95,5 +114,7 @@ public class SupplementService {
         supplement.setId(supplementId);
         return supplementRepository.save(supplement);
     } // Shouldnt let you update supplement with a name or ID or pubchem id that is the same
+
+
 
 }
