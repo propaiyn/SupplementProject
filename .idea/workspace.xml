@@ -5,14 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94a9d1f2-7307-406f-a1e1-3a03f64ac210" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/WebConfiguration/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/AppConfig/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/AlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/IsNullException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/NameExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/PubChemIdExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/SupplementNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementDTO/SupplementControllerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_classgraph_classgraph_4_8_83.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_webmvc_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_2_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_2_0_0_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/StudentConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplementProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SupplementProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/Exception/TypeMismatchHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/Supplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/Supplement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/WebConfiguration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/WebConfiguration/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,19 +72,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/Hassan/Desktop/SupplementProject&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/Hassan/Desktop/SupplementProject",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "configurable.group.build"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

@@ -23,27 +23,28 @@ public class Supplement {
             allocationSize = 1
     )
     @GeneratedValue(
-            strategy = GenerationType.SEQUENCE, // Recommended for postgres
+            strategy = GenerationType.IDENTITY, // Recommended for postgres
             generator = "supplement_sequence" // Sequence that we just created
     )
+    @NotNull
     @JsonProperty private Long id;
 
     @NotNull
     @JsonProperty private LocalDate entryDate = LocalDate.now();
 
-
+    @NotNull
     @JsonProperty private String name;
 
     //Implement regex no letters
-
+    @NotNull
     @JsonProperty private Long pubChemId;
-
+    @NotNull // Must enter at least n/a
     @JsonProperty private String description;
 
-
+    @NotNull
     @JsonProperty private Double lowerBoundaryDoseMG;
 
-
+    @NotNull
     @JsonProperty private Double upperBoundaryDoseMG;
 
      public Supplement(
