@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v5/supplement")
+@RequestMapping("api/v5.1/supplement")
 
 
 public class SupplementController {
@@ -20,12 +20,12 @@ public class SupplementController {
         this.supplementService = supplementService;
     }
 
-    @GetMapping
+    @GetMapping("/getall")
     public List<Supplement> getAllSupplements() {
         return supplementService.getAllSupplements();
     }
 
-    @PostMapping
+    @PostMapping("/addnew")
     public void addNewSupplement(@RequestBody Supplement supplement) {
         supplementService.addNewSupplement(supplement);
     }
@@ -41,16 +41,12 @@ public class SupplementController {
     public void deleteSuppByName(@PathVariable("supplementName") String supplementName) {
         supplementService.deleteSuppByName(supplementName);
     }
-//    @PutMapping(path = "{supplementId}")
-//    public void updateSupplement(
-//            @PathVariable("supplementId") Long supplementId,
-//            @RequestParam(required = false) String name)
-//    {
-//        supplementService.updateSupplement(supplementId, name);
-//    }
 
     @PutMapping(path = "{supplementId}")
-    public Supplement fullUpdateSupplement(@PathVariable("supplementId") Long supplementId, Long id, @RequestBody Supplement supplement) {
+    public Supplement fullUpdateSupplement(
+            @PathVariable("supplementId") Long supplementId,
+            Long id,
+            @RequestBody Supplement supplement) {
         return supplementService.updateSupplement(supplementId, supplement);
     }
 }

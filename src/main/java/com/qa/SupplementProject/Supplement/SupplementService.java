@@ -1,11 +1,8 @@
 package com.qa.SupplementProject.Supplement;
 
-import org.springframework.beans.TypeMismatchException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 import java.util.Objects;
@@ -23,32 +20,29 @@ public class SupplementService {
 
     public List<Supplement> getAllSupplements() {
         return supplementRepository.findAll();
-    }
+    } // Retrieves all supplements in the database
 
     public void addNewSupplement(Supplement supplement) {
 
         Optional<Supplement> suppNameOptional = supplementRepository
                 .findByName(supplement.getName());
 
-        if (suppNameOptional.isPresent()) {
-            throw new IllegalStateException(
-                    "Supplement " + supplement.getName() + " already exists in the database");
-        } else if(suppNameOptional.isEmpty()){
-            throw new NullPointerException(
-                    "Please provide the name of your supplement");
-        }
-
         Optional<Supplement> suppPCIDOptional = supplementRepository
                 .findByPubChemId(supplement.getPubChemId());
 
-        if (suppPCIDOptional.isPresent()) {
+        if (suppNameOptional.isPresent()) {
+            throw new IllegalStateException(
+                    "Supplement " + supplement.getName() + " already exists in the database");
+        } else if(suppNameOptional.isPresent()){
+            throw new IllegalStateException(
+                    "Please provide the name of your supplement");
+        } else if (suppPCIDOptional.isPresent()) {
             throw new IllegalStateException(
                     "Supplement with Pubchem ID " + supplement.getPubChemId() + " already exists in the database");
-        }else if(suppPCIDOptional.isEmpty()){
-            throw new NullPointerException(
+        }else if(suppPCIDOptional.isPresent()){
+            throw new IllegalStateException(
                     "Please provide the PubChemID of your supplement");
         }
-
         supplementRepository.save(supplement);
     }
 

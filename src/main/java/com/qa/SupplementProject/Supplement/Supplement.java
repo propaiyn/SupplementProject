@@ -1,11 +1,13 @@
 package com.qa.SupplementProject.Supplement;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.NotNull;
 import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString
@@ -24,36 +26,36 @@ public class Supplement {
             strategy = GenerationType.SEQUENCE, // Recommended for postgres
             generator = "supplement_sequence" // Sequence that we just created
     )
-    private Long id;
+    @JsonProperty private Long id;
 
     @NotNull
-    private LocalDate entryDate = LocalDate.now();
+    @JsonProperty private LocalDate entryDate = LocalDate.now();
 
-    @Column
-    private String name;
+
+    @JsonProperty private String name;
 
     //Implement regex no letters
-    @Column
-    private Long pubChemId;
 
-    private String description;
+    @JsonProperty private Long pubChemId;
 
-    @Column(name = "supplement_lower_boundary_dose_in_mg")
-    private Double lowerBoundaryDoseMG;
+    @JsonProperty private String description;
 
-    @Column(name = "supplement_upper_boundary_dose_in_mg")
-    private Double upperBoundaryDoseMG;
 
-    public Supplement(
+    @JsonProperty private Double lowerBoundaryDoseMG;
+
+
+    @JsonProperty private Double upperBoundaryDoseMG;
+
+     public Supplement(
                       String name,
-                      String description,
                       Long pubChemId,
+                      String description,
                       Double lowerBoundaryDoseMG,
                       Double upperBoundaryDoseMG
     ) {
         this.name = name;
-        this.description = description;
         this.pubChemId = pubChemId;
+        this.description = description;
         this.lowerBoundaryDoseMG = lowerBoundaryDoseMG;
         this.upperBoundaryDoseMG = upperBoundaryDoseMG;
     }
