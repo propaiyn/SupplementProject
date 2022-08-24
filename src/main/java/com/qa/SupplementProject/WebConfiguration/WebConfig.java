@@ -5,6 +5,7 @@ import org.springframework.util.AntPathMatcher;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+//This class enables case-insensitive path matching
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
     @Override

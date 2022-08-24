@@ -3,9 +3,10 @@ package com.qa.SupplementProject.Supplement;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import java.util.List;
 
+
+//DATABASE PREPOPULATION
 @Configuration
 public class SupplementConfig {
 

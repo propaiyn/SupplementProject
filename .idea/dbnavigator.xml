@@ -29,7 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="145460e0-2233-4ff3-9bc5-866e79f45672">
-      <console name="supplement@localhost" type="STANDARD" schema="information_schema" session="Main" />
+      <console name="supplement@localhost" type="STANDARD" schema="information_schema" session="Main"><![CDATA[SELECT * FROM "supplement";]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -43,6 +43,10 @@
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$PROJECT_DIR$/src/test/resources/Supplement-data.sql" connection-id="c57a066a-a8a0-4d47-a1e7-085178e17796" session-id="MAIN" current-schema="" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/resources/Supplement-schema.sql" connection-id="c57a066a-a8a0-4d47-a1e7-085178e17796" session-id="MAIN" current-schema="" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
