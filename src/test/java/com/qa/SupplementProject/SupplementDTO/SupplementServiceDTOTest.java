@@ -214,7 +214,7 @@ class SupplementServiceDTOTest {
     void testDeleteSuppByName() {
         doNothing().when(supplementRepository).deleteByName((String) any());
         when(supplementRepository.existsByName((String) any())).thenReturn(true);
-        supplementServiceDTO.deleteSuppByName("Supplement Name");
+        supplementServiceDTO.deleteSuppByName("SupplementName_Test");
         verify(supplementRepository).existsByName((String) any());
         verify(supplementRepository).deleteByName((String) any());
         assertTrue(supplementServiceDTO.getAllSupplements().isEmpty());
@@ -224,7 +224,7 @@ class SupplementServiceDTOTest {
     void testDeleteSuppByName2() {
         doThrow(new IDNotFoundException("An error occurred")).when(supplementRepository).deleteByName((String) any());
         when(supplementRepository.existsByName((String) any())).thenReturn(true);
-        assertThrows(IDNotFoundException.class, () -> supplementServiceDTO.deleteSuppByName("Supplement Name"));
+        assertThrows(IDNotFoundException.class, () -> supplementServiceDTO.deleteSuppByName("SupplementName_Test"));
         verify(supplementRepository).existsByName((String) any());
         verify(supplementRepository).deleteByName((String) any());
     }
@@ -249,18 +249,8 @@ class SupplementServiceDTOTest {
         supplement1.setPubChemId(123L);
         supplement1.setUpperBoundaryDoseMG(15.0d);
         Optional<Supplement> ofResult = Optional.of(supplement1);
-        when(supplementRepository.save((Supplement) any())).thenReturn(supplement);
-        when(supplementRepository.findByName((String) any())).thenReturn(ofResult);
-        Supplement supplement2 = mock(Supplement.class);
-        when(supplement2.getName()).thenReturn("SupplementName_Test");
-        doNothing().when(supplement2).setDescription((String) any());
-        doNothing().when(supplement2).setEntryDate((LocalDate) any());
-        doNothing().when(supplement2).setId((Long) any());
-        doNothing().when(supplement2).setLowerBoundaryDoseMG((Double) any());
-        doNothing().when(supplement2).setName((String) any());
-        doNothing().when(supplement2).setPubChemId((Long) any());
-        doNothing().when(supplement2).setUpperBoundaryDoseMG((Double) any());
 
+        Supplement supplement2 = new Supplement();
         supplement2.setDescription("Supplement Test Description");
         supplement2.setEntryDate(LocalDate.of(2022, 8, 24));
         supplement2.setId(123L);
@@ -268,17 +258,124 @@ class SupplementServiceDTOTest {
         supplement2.setName("SupplementName_Test");
         supplement2.setPubChemId(123L);
         supplement2.setUpperBoundaryDoseMG(15.0d);
-        assertSame(supplement, supplementServiceDTO.updateSupplement(123L, supplement2));
-        verify(supplementRepository).save((Supplement) any());
+        Optional<Supplement> ofResult1 = Optional.of(supplement2);
+        when(supplementRepository.save((Supplement) any())).thenReturn(supplement);
+        when(supplementRepository.findByName((String) any())).thenReturn(ofResult);
+        when(supplementRepository.findByPubChemId((Long) any())).thenReturn(ofResult1);
+
+        Supplement supplement3 = new Supplement();
+        supplement3.setDescription("Supplement Test Description");
+        supplement3.setEntryDate(LocalDate.of(2022, 8, 24));
+        supplement3.setId(123L);
+        supplement3.setLowerBoundaryDoseMG(10.0d);
+        supplement3.setName("SupplementName_Test");
+        supplement3.setPubChemId(123L);
+        supplement3.setUpperBoundaryDoseMG(15.0d);
+        assertThrows(NameExistsException.class, () -> supplementServiceDTO.updateSupplement(123L, supplement3));
         verify(supplementRepository).findByName((String) any());
-        verify(supplement2).getName();
-        verify(supplement2).setDescription((String) any());
-        verify(supplement2).setEntryDate((LocalDate) any());
-        verify(supplement2, atLeast(1)).setId((Long) any());
-        verify(supplement2).setLowerBoundaryDoseMG((Double) any());
-        verify(supplement2).setName((String) any());
-        verify(supplement2).setPubChemId((Long) any());
-        verify(supplement2).setUpperBoundaryDoseMG((Double) any());
+        verify(supplementRepository).findByPubChemId((Long) any());
     }
+
+    @Test
+    void testUpdateSupplement2() {
+        Supplement supplement = new Supplement();
+        supplement.setDescription("Supplement Test Description");
+        supplement.setEntryDate(LocalDate.of(2022, 8, 24));
+        supplement.setId(123L);
+        supplement.setLowerBoundaryDoseMG(10.0d);
+        supplement.setName("SupplementName_Test");
+        supplement.setPubChemId(123L);
+        supplement.setUpperBoundaryDoseMG(10.0d);
+
+        Supplement supplement1 = new Supplement();
+        supplement1.setDescription("Supplement Test Description");
+        supplement1.setEntryDate(LocalDate.of(2022, 8, 24));
+        supplement1.setId(123L);
+        supplement1.setLowerBoundaryDoseMG(10.0d);
+        supplement1.setName("SupplementName_Test");
+        supplement1.setPubChemId(123L);
+        supplement1.setUpperBoundaryDoseMG(10.0d);
+        Optional<Supplement> ofResult = Optional.of(supplement1);
+        when(supplementRepository.save((Supplement) any())).thenReturn(supplement);
+        when(supplementRepository.findByName((String) any())).thenReturn(Optional.empty());
+        when(supplementRepository.findByPubChemId((Long) any())).thenReturn(ofResult);
+
+        Supplement supplement2 = new Supplement();
+        supplement2.setDescription("Supplement Test Description");
+        supplement2.setEntryDate(LocalDate.of(2022, 8, 24));
+        supplement2.setId(123L);
+        supplement2.setLowerBoundaryDoseMG(10.0d);
+        supplement2.setName("SupplementName_Test");
+        supplement2.setPubChemId(123L);
+        supplement2.setUpperBoundaryDoseMG(10.0d);
+        assertThrows(PubChemIdExistsException.class, () -> supplementServiceDTO.updateSupplement(123L, supplement2));
+        verify(supplementRepository).findByName((String) any());
+        verify(supplementRepository).findByPubChemId((Long) any());
+    }
+
+    @Test
+    void testUpdateSupplement3() {
+        Supplement supplement = new Supplement();
+        supplement.setDescription("Supplement Test Description");
+        supplement.setEntryDate(LocalDate.of(2022, 8, 24));
+        supplement.setId(123L);
+        supplement.setLowerBoundaryDoseMG(10.0d);
+        supplement.setName("SupplementName_Test");
+        supplement.setPubChemId(123L);
+        supplement.setUpperBoundaryDoseMG(10.0d);
+
+        Supplement supplement1 = new Supplement();
+        supplement1.setDescription("Supplement Test Description");
+        supplement1.setEntryDate(LocalDate.of(2022, 8, 24));
+        supplement1.setId(123L);
+        supplement1.setLowerBoundaryDoseMG(10.0d);
+        supplement1.setName("SupplementName_Test");
+        supplement1.setPubChemId(123L);
+        supplement1.setUpperBoundaryDoseMG(10.0d);
+        Optional<Supplement> ofResult = Optional.of(supplement1);
+
+        Supplement supplement2 = new Supplement();
+        supplement2.setDescription("Supplement Test Description");
+        supplement2.setEntryDate(LocalDate.of(2022, 8, 24));
+        supplement2.setId(123L);
+        supplement2.setLowerBoundaryDoseMG(10.0d);
+        supplement2.setName("SupplementName_Test");
+        supplement2.setPubChemId(123L);
+        supplement2.setUpperBoundaryDoseMG(10.0d);
+        Optional<Supplement> ofResult1 = Optional.of(supplement2);
+        when(supplementRepository.save((Supplement) any())).thenReturn(supplement);
+        when(supplementRepository.findByName((String) any())).thenReturn(ofResult);
+        when(supplementRepository.findByPubChemId((Long) any())).thenReturn(ofResult1);
+        Supplement supplement3 = mock(Supplement.class);
+        when(supplement3.getPubChemId()).thenReturn(123L);
+        when(supplement3.getName()).thenReturn("SupplementName_Test");
+        doNothing().when(supplement3).setDescription((String) any());
+        doNothing().when(supplement3).setEntryDate((LocalDate) any());
+        doNothing().when(supplement3).setId((Long) any());
+        doNothing().when(supplement3).setLowerBoundaryDoseMG((Double) any());
+        doNothing().when(supplement3).setName((String) any());
+        doNothing().when(supplement3).setPubChemId((Long) any());
+        doNothing().when(supplement3).setUpperBoundaryDoseMG((Double) any());
+        supplement3.setDescription("Supplement Test Description");
+        supplement3.setEntryDate(LocalDate.ofEpochDay(1L));
+        supplement3.setId(123L);
+        supplement3.setLowerBoundaryDoseMG(10.0d);
+        supplement3.setName("SupplementName_Test");
+        supplement3.setPubChemId(123L);
+        supplement3.setUpperBoundaryDoseMG(10.0d);
+        assertThrows(NameExistsException.class, () -> supplementServiceDTO.updateSupplement(123L, supplement3));
+        verify(supplementRepository).findByName((String) any());
+        verify(supplementRepository).findByPubChemId((Long) any());
+        verify(supplement3).getPubChemId();
+        verify(supplement3, atLeast(1)).getName();
+        verify(supplement3).setDescription((String) any());
+        verify(supplement3).setEntryDate((LocalDate) any());
+        verify(supplement3).setId((Long) any());
+        verify(supplement3).setLowerBoundaryDoseMG((Double) any());
+        verify(supplement3).setName((String) any());
+        verify(supplement3).setPubChemId((Long) any());
+        verify(supplement3).setUpperBoundaryDoseMG((Double) any());
+    }
+
 }
 

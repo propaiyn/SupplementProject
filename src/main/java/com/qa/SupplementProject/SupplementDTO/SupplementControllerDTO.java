@@ -1,12 +1,14 @@
 package com.qa.SupplementProject.SupplementDTO;
 
+import com.qa.SupplementProject.Exception.IDNotFoundException;
 import com.qa.SupplementProject.Supplement.Supplement;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v6.1/dto/supplement")
+@RequestMapping("api/v6.2/dto/supplement")
 public class SupplementControllerDTO {
     private SupplementServiceDTO service;
 
@@ -49,7 +51,7 @@ public class SupplementControllerDTO {
     // To delete supplements by id or name
     @Transactional
     @DeleteMapping(path = "/delByID/{supplementID}") // e.g. not null optional ?... enforce
-    public void deleteSuppByID(@PathVariable("supplementID") Long supplementID) {
+    public void deleteSuppByID(@PathVariable ("supplementID") Long supplementID) {
         this.service.deleteSuppByID(supplementID);
     }
 

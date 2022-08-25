@@ -40,18 +40,13 @@ public class Supplement {
     @NotNull
     @JsonProperty private LocalDate entryDate = LocalDate.now();
 
-    @NotNull
     @JsonProperty private String name;
 
-    @NotNull
     @JsonProperty private Long pubChemId;
-    @NotNull
     @JsonProperty private String description;
 
-    @NotNull
     @JsonProperty private Double lowerBoundaryDoseMG;
 
-    @NotNull
     @JsonProperty private Double upperBoundaryDoseMG;
 
      public Supplement(

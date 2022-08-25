@@ -73,13 +73,13 @@ public class SupplementServiceDTO {
         if (suppNameOptional.isPresent()) {
             throw new NameExistsException(
                     "Supplement " + supplement.getName() + " already exists in the database");
-        } else if(suppNameOptional.isPresent()) {
-            throw new IllegalStateException("Please provide the name of your supplement");
+        } else if(supplement.getName() == null) {
+            throw new NullNameException("Please provide the name of your supplement");
         } else if (suppPCIDOptional.isPresent()) {
             throw new PubChemIdExistsException(
                     "Supplement with PubChem ID " + supplement.getPubChemId() + " already exists in the database");
-        }else if(suppPCIDOptional.isPresent()){
-            throw new IllegalStateException(
+        }else if(supplement.getPubChemId() == null){
+            throw new NullPCIDException(
                     "Please provide the PubChemID of your supplement");
         }
         Supplement saved = this.supplementRepository.save(supplement);
@@ -87,34 +87,48 @@ public class SupplementServiceDTO {
     }
 
     public void deleteSuppByID(Long supplementId) {
-        boolean idExists = supplementRepository.existsById(supplementId);
+        Boolean idExists = supplementRepository.existsById(supplementId);
 
         if (!idExists) {
             throw new IDNotFoundException(
                     "Supplement with ID: " + supplementId + " does not exist in the database");
-        } else{ supplementRepository.deleteById(supplementId);
+        } else {
+            supplementRepository.deleteById(supplementId);
+            System.out.println("Supplement with ID: " + supplementId + " was successfully deleted");
         }
     }
 
     public void deleteSuppByName(String supplementName) {
-        boolean nameExists = supplementRepository.existsByName(supplementName);
+        Boolean nameExists = supplementRepository.existsByName(supplementName);
 
         if (!nameExists) {
-            throw new IDNotFoundException("Supplement with name: " + supplementName + " does not exist in the database");
+            throw new NameNotFoundException("Supplement with name: " + supplementName + " does not exist in the database");
         } else {
             supplementRepository.deleteByName(supplementName);
-            System.out.println("Supplement with name " + supplementName + " was successfully deleted");
+            System.out.println("Supplement with name: " + supplementName + " was successfully deleted");
         }
     }
 
     public Supplement updateSupplement(Long supplementId, Supplement supplement) {
         Optional<Supplement> suppNameOptional = supplementRepository
                 .findByName(supplement.getName());
+        Optional<Supplement> suppPCIDOptional = supplementRepository
+                .findByPubChemId(supplement.getPubChemId());
+
+        if (suppNameOptional.isPresent()) {
+            throw new NameExistsException(
+                    "Supplement " + supplement.getName() + " already exists in the database");
+        } else if(supplement.getName() == null) {
+            throw new NullNameException("Please provide the name of your supplement");
+        } else if (suppPCIDOptional.isPresent()) {
+            throw new PubChemIdExistsException(
+                    "Supplement with PubChem ID " + supplement.getPubChemId() + " already exists in the database");
+        }else if(supplement.getPubChemId() == null){
+            throw new NullPCIDException(
+                    "Please provide the PubChemID of your supplement");
+        }
 
         supplement.setId(supplementId);
         return supplementRepository.save(supplement);
     }
-
-
-
 }
