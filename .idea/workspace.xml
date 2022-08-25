@@ -1,69 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SupplementProject:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94a9d1f2-7307-406f-a1e1-3a03f64ac210" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CoverUsage.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_27_0_1_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_2_1_214.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_23_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_analysis_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_util_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_annotations_4_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_junit_4_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_pluginapi_4_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_sandbox_4_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_shadowapi_4_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_utils_4_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_utils_reflector_4_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/IDNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/NameNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/SupplementProject/SupplementDTO/SupplementControllerDTOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Supplement-schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_3_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_3_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SupplementProject_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_10_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/ControllerAdvisor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/NullNameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/NullPCIDException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/structure101-settings.java.hsw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_15_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_15_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SupplementProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SupplementProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/IsNullException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/AlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/AlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/IDNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/IDNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/NameExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/NameExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/NameNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/NameNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/PubChemIdExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/PubChemIdExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Exception/SupplementNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/Exception/TypeMismatchHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/Supplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/Supplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/Supplement/SupplementService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementDTO/SupplementControllerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementDTO/SupplementControllerDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementProjectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/WebConfiguration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/WebConfiguration/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Supplement-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/SupplementProject/SupplementProjectApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/SupplementProject/SupplementDTO/SupplementControllerDTOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/SupplementProject/SupplementDTO/SupplementControllerDTOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,11 +85,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/Users/Hassan/Desktop/SupplementProject",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "s101-scope": "<All Modules>",
+    "s101-settings": "/Users/Hassan/Desktop/SupplementProject/structure101-settings.java.hsw",
+    "s101-testModuleSuffix": "-test",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -150,6 +132,11 @@
           <option name="ENABLED" value="true" />
           <option name="INCLUDE" value="false" />
         </pattern>
+        <pattern>
+          <option name="PATTERN" value="com.qa.SupplementProject.Exception.ControllerAdvisor" />
+          <option name="ENABLED" value="true" />
+          <option name="INCLUDE" value="false" />
+        </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.qa.SupplementProject" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -159,12 +146,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Write tests for class PubChemIdExistsException" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+    <configuration name="Write tests for class NullNameException" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
       <module name="SupplementProject" />
-      <settings run-config-name="Write tests for class PubChemIdExistsException" include-system-env-vars="true">
+      <settings run-config-name="Write tests for class NullNameException" include-system-env-vars="true">
         <jvm-args />
         <selection-scope>class</selection-scope>
-        <selected-element key="com.qa.SupplementProject.Exception.PubChemIdExistsException" />
+        <selected-element key="com.qa.SupplementProject.Exception.NullNameException" />
+      </settings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Write tests for class NullPCIDException" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="SupplementProject" />
+      <settings run-config-name="Write tests for class NullPCIDException" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>class</selection-scope>
+        <selected-element key="com.qa.SupplementProject.Exception.NullPCIDException" />
       </settings>
       <method v="2" />
     </configuration>
@@ -186,33 +182,6 @@
       </settings>
       <method v="2" />
     </configuration>
-    <configuration name="Write tests for class SupplementProjectApplication" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
-      <module name="SupplementProject" />
-      <settings run-config-name="Write tests for class SupplementProjectApplication" include-system-env-vars="true">
-        <jvm-args />
-        <selection-scope>class</selection-scope>
-        <selected-element key="com.qa.SupplementProject.SupplementProjectApplication" />
-      </settings>
-      <method v="2" />
-    </configuration>
-    <configuration name="Write tests for class SupplementRepository" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
-      <module name="SupplementProject" />
-      <settings run-config-name="Write tests for class SupplementRepository" include-system-env-vars="true">
-        <jvm-args />
-        <selection-scope>class</selection-scope>
-        <selected-element key="com.qa.SupplementProject.Supplement.SupplementRepository" />
-      </settings>
-      <method v="2" />
-    </configuration>
-    <configuration name="Write tests for class SupplementServiceDTO" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
-      <module name="SupplementProject" />
-      <settings run-config-name="Write tests for class SupplementServiceDTO" include-system-env-vars="true">
-        <jvm-args />
-        <selection-scope>class</selection-scope>
-        <selected-element key="com.qa.SupplementProject.SupplementDTO.SupplementServiceDTO" />
-      </settings>
-      <method v="2" />
-    </configuration>
     <configuration name="Write tests for method SupplementControllerDTO.getSupplementByName" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
       <module name="SupplementProject" />
       <settings run-config-name="Write tests for method SupplementControllerDTO.getSupplementByName" include-system-env-vars="true">
@@ -222,23 +191,41 @@
       </settings>
       <method v="2" />
     </configuration>
+    <configuration name="Write tests for method SupplementServiceDTO.addNewSupplement" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="SupplementProject" />
+      <settings run-config-name="Write tests for method SupplementServiceDTO.addNewSupplement" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="com.qa.SupplementProject.SupplementDTO.SupplementServiceDTO.addNewSupplement:(Lcom/qa/SupplementProject/Supplement/Supplement;)Lcom/qa/SupplementProject/Supplement/Supplement;" />
+      </settings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Write tests for method SupplementServiceDTO.updateSupplement" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="SupplementProject" />
+      <settings run-config-name="Write tests for method SupplementServiceDTO.updateSupplement" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="com.qa.SupplementProject.SupplementDTO.SupplementServiceDTO.updateSupplement:(Ljava/lang/Long;Lcom/qa/SupplementProject/Supplement/Supplement;)Lcom/qa/SupplementProject/Supplement/Supplement;" />
+      </settings>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Diffblue Cover.Write tests for class SupplementControllerDTO" />
       <item itemvalue="Diffblue Cover.Write tests for class SupplementController" />
-      <item itemvalue="Diffblue Cover.Write tests for class PubChemIdExistsException" />
-      <item itemvalue="Diffblue Cover.Write tests for class SupplementServiceDTO" />
+      <item itemvalue="Diffblue Cover.Write tests for class NullNameException" />
+      <item itemvalue="Diffblue Cover.Write tests for class NullPCIDException" />
+      <item itemvalue="Diffblue Cover.Write tests for method SupplementServiceDTO.addNewSupplement" />
+      <item itemvalue="Diffblue Cover.Write tests for method SupplementServiceDTO.updateSupplement" />
       <item itemvalue="Diffblue Cover.Write tests for method SupplementControllerDTO.getSupplementByName" />
-      <item itemvalue="Diffblue Cover.Write tests for class SupplementRepository" />
-      <item itemvalue="Diffblue Cover.Write tests for class SupplementProjectApplication" />
       <item itemvalue="JUnit.com.qa.SupplementProject in SupplementProject" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Diffblue Cover.Write tests for method SupplementServiceDTO.addNewSupplement" />
+        <item itemvalue="Diffblue Cover.Write tests for class NullPCIDException" />
+        <item itemvalue="Diffblue Cover.Write tests for class NullNameException" />
+        <item itemvalue="Diffblue Cover.Write tests for method SupplementServiceDTO.updateSupplement" />
         <item itemvalue="Diffblue Cover.Write tests for method SupplementControllerDTO.getSupplementByName" />
-        <item itemvalue="Diffblue Cover.Write tests for class PubChemIdExistsException" />
-        <item itemvalue="Diffblue Cover.Write tests for class SupplementServiceDTO" />
-        <item itemvalue="Diffblue Cover.Write tests for class SupplementControllerDTO" />
-        <item itemvalue="Diffblue Cover.Write tests for class SupplementRepository" />
       </list>
     </recent_temporary>
   </component>
@@ -267,13 +254,25 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTO.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SupplementProject$com_qa_SupplementProject_in_SupplementProject.ic" NAME="com.qa.SupplementProject in SupplementProject Coverage Results" MODIFIED="1661358619039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SupplementProject$com_qa_SupplementProject_in_SupplementProject.ic" NAME="com.qa.SupplementProject in SupplementProject Coverage Results" MODIFIED="1661442230172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <EXCLUDED_FILTER>com.qa.SupplementProject.AppConfig.*</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.qa.SupplementProject.WebConfiguration.*</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.qa.SupplementProject.SupplementProjectApplication</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.qa.SupplementProject.Supplement.SupplementConfig</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.qa.SupplementProject.Supplement.Supplement</EXCLUDED_FILTER>
+      <EXCLUDED_FILTER>com.qa.SupplementProject.Exception.ControllerAdvisor</EXCLUDED_FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SupplementProject$SupplementServiceDTOTest.ic" NAME="SupplementServiceDTOTest Coverage Results" MODIFIED="1661340281395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.qa.SupplementProject.SupplementDTO.*</FILTER>

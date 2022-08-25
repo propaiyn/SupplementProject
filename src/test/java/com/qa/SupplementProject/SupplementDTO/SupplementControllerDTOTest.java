@@ -53,7 +53,7 @@ class SupplementControllerDTOTest {
 
         // When any ID is searched for it should return a supplement
         when(supplementServiceDTO.getSupplementById((Long) any())).thenReturn(supplement);
-        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api/v6.1/dto/supplement/getById/{supplementId}", 123L);
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api/v6.2/dto/supplement/getById/{supplementId}", 123L);
         MockMvcBuilders.standaloneSetup(supplementControllerDTO).build().perform(requestBuilder).andExpect(MockMvcResultMatchers.status().isOk()).andExpect(MockMvcResultMatchers.content().contentType("application/json")).andExpect(MockMvcResultMatchers.content().string("{\"id\":123,\"entryDate\":[2022,8,24],\"name\":\"SupplementName_Test\",\"pubChemId\":123,\"description\":\"Supplement test description\",\"lowerBoundaryDoseMG\":10.0,\"upperBoundaryDoseMG\":15.0}"));
     }
     // Above lines search for the supplementID of 123L and expect the result to be a json,
@@ -74,7 +74,7 @@ class SupplementControllerDTOTest {
         supplement.setUpperBoundaryDoseMG(15.0d);
 
         when(supplementServiceDTO.getSupplementByName((String) any())).thenReturn(supplement);
-        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api/v6.1/dto/supplement/getByName/{name}", "SupplementName_Test");
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api/v6.2/dto/supplement/getByName/{name}", "SupplementName_Test");
         MockMvcBuilders.standaloneSetup(supplementControllerDTO).build().perform(requestBuilder).andExpect(MockMvcResultMatchers.status().isOk()).andExpect(MockMvcResultMatchers.content().contentType("application/json")).andExpect(MockMvcResultMatchers.content().string("{\"id\":123,\"entryDate\":[2022,8,24],\"name\":\"SupplementName_Test\",\"pubChemId\":123,\"description\":\"Supplement test description\",\"lowerBoundaryDoseMG\":10.0,\"upperBoundaryDoseMG\":15.0}"));
     }
 
@@ -115,7 +115,7 @@ class SupplementControllerDTOTest {
         //Mock request builder is used to delete a supplement by ID
         doNothing().when(supplementServiceDTO).deleteSuppByID((Long) any());
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.delete(
-                "/api/v6.1/dto/supplement/delByID/{supplementID}", 1L
+                "/api/v6.2/dto/supplement/delByID/{supplementID}", 1L
         );
         MockMvcBuilders.standaloneSetup(supplementControllerDTO).build().perform(requestBuilder).andExpect(
                 MockMvcResultMatchers.status().isOk() //Checks whether HTTP status code is 200/Ok i.e. no errors deleting
@@ -129,58 +129,10 @@ class SupplementControllerDTOTest {
         // Same as above but using name as parameter
         doNothing().when(supplementServiceDTO).deleteSuppByName((String) any());
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.delete(
-                "/api/v6.1/dto/supplement/delByName/{supplementName}", "Supplement Name");
+                "/api/v6.2/dto/supplement/delByName/{supplementName}", "Supplement Name");
         MockMvcBuilders.standaloneSetup(supplementControllerDTO).build().perform(requestBuilder).andExpect(
                 MockMvcResultMatchers.status().isOk()
         );
-    }
-
-    @Test
-    void testFullUpdateSupplement() {
-
-        // This test checks that updated supplements contain the same values, as asserted
-        Supplement supplement = new Supplement();
-        supplement.setDescription("Supplement test description");
-        supplement.setEntryDate(LocalDate.of(2022, 8, 24));
-        supplement.setId(123L);
-        supplement.setLowerBoundaryDoseMG(10.0d);
-        supplement.setName("SupplementName_Test");
-        supplement.setPubChemId(123L);
-        supplement.setUpperBoundaryDoseMG(15.0d);
-
-        Supplement supplement1 = new Supplement();
-        supplement1.setDescription("Supplement test description");
-        supplement1.setEntryDate(LocalDate.of(2022, 8, 24));
-        supplement1.setId(123L);
-        supplement1.setLowerBoundaryDoseMG(10.0d);
-        supplement1.setName("SupplementName_Test");
-        supplement1.setPubChemId(123L);
-        supplement1.setUpperBoundaryDoseMG(15.0d);
-
-
-        Optional<Supplement> ofResult = Optional.of(supplement1);
-        SupplementRepository supplementRepository = mock(SupplementRepository.class);
-        when(supplementRepository.save((Supplement) any())).thenReturn(supplement);
-        when(supplementRepository.findByName((String) any())).thenReturn(ofResult);
-        SupplementControllerDTO supplementControllerDTO = new SupplementControllerDTO(
-                new SupplementServiceDTO(
-                        supplementRepository, new ModelMapper()
-                )
-        );
-
-        Supplement supplement2 = new Supplement();
-        supplement2.setDescription("Supplement test description");
-        supplement2.setEntryDate(LocalDate.of(2022, 8, 24));
-        supplement2.setId(123L);
-        supplement2.setLowerBoundaryDoseMG(10.0d);
-        supplement2.setName("SupplementName_Test");
-        supplement2.setPubChemId(123L);
-        supplement2.setUpperBoundaryDoseMG(15.0d);
-
-        assertSame(supplement, supplementControllerDTO.fullUpdateSupplement(123L, 123L, supplement2));
-        verify(supplementRepository).save((Supplement) any());
-        verify(supplementRepository).findByName((String) any());
-        assertEquals(123L, supplement2.getId().longValue());
     }
 
     @Test
@@ -201,7 +153,7 @@ class SupplementControllerDTOTest {
         supplementList.add(supplement);
         when(supplementServiceDTO.getAllSupplementsSortedById()).thenReturn(supplementList);
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get(
-                "/api/v6.1/dto/supplement/sortedById"
+                "/api/v6.2/dto/supplement/sortedById"
         );
         MockMvcBuilders.standaloneSetup(supplementControllerDTO).build().perform(requestBuilder).andExpect(
                 MockMvcResultMatchers.status().isOk()).andExpect(
@@ -229,7 +181,7 @@ class SupplementControllerDTOTest {
         supplementList.add(supplement);
         when(supplementServiceDTO.getAllSupplementsSortedByName()).thenReturn(supplementList);
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get(
-                "/api/v6.1/dto/supplement/sortedByName"
+                "/api/v6.2/dto/supplement/sortedByName"
         );
         MockMvcBuilders.standaloneSetup(supplementControllerDTO).build().perform(requestBuilder).andExpect(
                 MockMvcResultMatchers.status().isOk()).andExpect(
@@ -255,7 +207,7 @@ class SupplementControllerDTOTest {
         supplementList.add(supplement);
         when(supplementServiceDTO.getAllSupplements()).thenReturn(supplementList);
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get(
-                "/api/v6.1/dto/supplement/all")
+                "/api/v6.2/dto/supplement/all")
                 .param("SupplementName_Test", "foo"
                 );
         MockMvcBuilders.standaloneSetup(supplementControllerDTO).build().perform(requestBuilder).andExpect(
