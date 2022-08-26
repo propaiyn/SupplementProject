@@ -3,7 +3,6 @@ package com.qa.SupplementProject.Supplement;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.NotNull;
 import lombok.*;
-import org.intellij.lang.annotations.Pattern;
 
 import javax.persistence.*;
 import java.time.LocalDate;
