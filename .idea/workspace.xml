@@ -11,9 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94a9d1f2-7307-406f-a1e1-3a03f64ac210" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/SupplementProject/SupplementDTO/SupplementServiceDTOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SupplementProject-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/SupplementProject-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
       <recent name="Config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.qa.SupplementProject in SupplementProject">
+  <component name="RunManager">
     <configuration name="com.qa.SupplementProject in SupplementProject" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="SupplementProject" />
       <extension name="coverage">
@@ -226,7 +224,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SupplementProject$com_qa_SupplementProject_in_SupplementProject.ic" NAME="com.qa.SupplementProject in SupplementProject Coverage Results" MODIFIED="1661504855497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SupplementProject$com_qa_SupplementProject_in_SupplementProject.ic" NAME="com.qa.SupplementProject in SupplementProject Coverage Results" MODIFIED="1661507023856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <EXCLUDED_FILTER>com.qa.SupplementProject.AppConfig.*</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.qa.SupplementProject.WebConfiguration.*</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.qa.SupplementProject.SupplementProjectApplication</EXCLUDED_FILTER>
