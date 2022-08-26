@@ -115,19 +115,12 @@ public class SupplementServiceDTO {
         Optional<Supplement> suppPCIDOptional = supplementRepository
                 .findByPubChemId(supplement.getPubChemId());
 
-        if (suppNameOptional.isPresent()) {
-            throw new NameExistsException(
-                    "Supplement " + supplement.getName() + " already exists in the database");
-        } else if(supplement.getName() == null) {
+       if(supplement.getName() == null) {
             throw new NullNameException("Please provide the name of your supplement");
-        } else if (suppPCIDOptional.isPresent()) {
-            throw new PubChemIdExistsException(
-                    "Supplement with PubChem ID " + supplement.getPubChemId() + " already exists in the database");
-        }else if(supplement.getPubChemId() == null){
+       }else if(supplement.getPubChemId() == null){
             throw new NullPCIDException(
                     "Please provide the PubChemID of your supplement");
         }
-
         supplement.setId(supplementId);
         return supplementRepository.save(supplement);
     }
